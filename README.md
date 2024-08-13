@@ -2,7 +2,7 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ofRC5td5rYFlonUKfXhbWmAFJu4RLIR8?usp=sharing)
 
-This project demonstrates how to build a smart chatbot for board games using a Large Language Model (LLM) and implement Retrieval Augmented Generation (RAG) with the LangChain framework. The chatbot reads rulebooks and leverages Google's latest language model namely Google Gemini 1.5 Flash to provide accurate answers to questions about the games. 
+This project demonstrates how to build a smart chatbot for board games using a Large Language Model (LLM) and implement Retrieval Augmented Generation (RAG) with the LangChain framework. The chatbot reads rulebooks and leverages Google's latest language model namely Google Gemini 1.5 Flash to provide accurate answers to questions about the games.
 
 ## Key Achievements:
 
@@ -16,8 +16,14 @@ This project demonstrates how to build a smart chatbot for board games using a L
 - Learning Tool: Aids in understanding complex game mechanics by providing clear explanations on demand.
 - Community Building: Fosters a more inclusive gaming environment by lowering the barrier to entry for new players.
 - Educational Resource: Serves as a practical example of how to build LLM-powered applications using LangChain and Google Colab.
+- This application currently supports the following games:
+    - Catan base game & 5-6 player expansion
+    - Codenames
+    - Pandemic
+    - Monopoly
+    - Ticket to Ride base game & expansions
 
-## How to Run It:
+    ## How to Run It:
 
 - Open the notebook in Google Colab (link provided).
 - Install the necessary libraries by running the provided code cell.
