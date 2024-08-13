@@ -25,7 +25,7 @@ This project demonstrates how to build a smart chatbot for board games using a L
 
     ## How to Run It:
 
-- Open the notebook in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ofRC5td5rYFlonUKfXhbWmAFJu4RLIR8?usp=sharing).
+- Open the notebook in Google Colab. [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ofRC5td5rYFlonUKfXhbWmAFJu4RLIR8?usp=sharing)
 - Install the necessary libraries by running the provided code cell.
 - Upload the provided board game rulebook PDFs to the designated folder (you can include your own PDFs too)
 - Execute the remaining code cells sequentially.
