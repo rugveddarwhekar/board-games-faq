@@ -1,5 +1,7 @@
 # Board Games FAQ
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ofRC5td5rYFlonUKfXhbWmAFJu4RLIR8?usp=sharing)
+
 This project demonstrates how to build a smart chatbot for board games using a Large Language Model (LLM) and implement Retrieval Augmented Generation (RAG) with the LangChain framework. The chatbot reads rulebooks and leverages Google's latest language model namely Google Gemini 1.5 Flash to provide accurate answers to questions about the games. 
 
 ## Key Achievements:
