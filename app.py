@@ -19,9 +19,9 @@ from IPython.display import Markdown
 import textwrap
 
 # Get API key from environment variable (preferred) or secrets file
-GOOGLE_API_KEY = os.environ.get('GEMINI_API_KEY')
+# GOOGLE_API_KEY = os.environ.get('GEMINI_API_KEY')
 # or
-# GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
+GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
