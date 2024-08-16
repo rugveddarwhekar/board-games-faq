@@ -7,3 +7,4 @@ langchain-google-genai
 google-generativeai
 streamlit
 pyngrok
+langchain_community
