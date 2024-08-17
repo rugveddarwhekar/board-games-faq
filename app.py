@@ -35,11 +35,28 @@ pdf_directory = "./board_games" # Adjust if your PDFs are in a different subdire
 documents = []
 
 # Iterate through each file in the directory
+# for filename in os.listdir(pdf_directory):
+#     if filename.endswith(".pdf"):
+#         filepath = os.path.join(pdf_directory, filename)
+#         loader = PyPDFLoader(filepath)
+#         documents.extend(loader.load())
+
 for filename in os.listdir(pdf_directory):
     if filename.endswith(".pdf"):
         filepath = os.path.join(pdf_directory, filename)
-        loader = PyPDFLoader(filepath)
-        documents.extend(loader.load())
+
+        # Prompt the user for the password if the PDF is encrypted
+        try:
+            loader = PyPDFLoader(filepath)
+            documents.extend(loader.load())
+        except PyPDFLoader.EncryptedFileError:
+            password = st.text_input(f"Enter password for {filename}:", type="password")
+            if password:
+                loader = PyPDFLoader(filepath, password=password)
+                documents.extend(loader.load())
+            else:
+                st.warning(f"Skipping {filename} due to missing password.")
+
 
 # Split the documents into smaller chunks for efficient processing
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=6000, chunk_overlap=750)
