@@ -11,3 +11,4 @@ ipython
 numpy
 pandas
 pypdf
+cryptography
