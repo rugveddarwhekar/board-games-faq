@@ -8,4 +8,4 @@ google-generativeai
 streamlit
 pyngrok
 langchain_community
-IPython.display
+ipython
