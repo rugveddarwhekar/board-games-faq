@@ -1,7 +1,6 @@
 langchain
 google-search
 chromadb
-pypdf
 unstructured
 langchain-google-genai
 google-generativeai
