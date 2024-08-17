@@ -41,22 +41,28 @@ documents = []
 #         loader = PyPDFLoader(filepath)
 #         documents.extend(loader.load())
 
+# for filename in os.listdir(pdf_directory):
+#     if filename.endswith(".pdf"):
+#         filepath = os.path.join(pdf_directory, filename)
+
+#         # Prompt the user for the password if the PDF is encrypted
+#         try:
+#             loader = PyPDFLoader(filepath)
+#             documents.extend(loader.load())
+#         except PyPDFLoader.EncryptedFileError:
+#             password = st.text_input(f"Enter password for {filename}:", type="password")
+#             if password:
+#                 loader = PyPDFLoader(filepath, password=password)
+#                 documents.extend(loader.load())
+#             else:
+#                 st.warning(f"Skipping {filename} due to missing password.")
+
+# Iterate through each file in the directory
 for filename in os.listdir(pdf_directory):
     if filename.endswith(".pdf"):
         filepath = os.path.join(pdf_directory, filename)
-
-        # Prompt the user for the password if the PDF is encrypted
-        try:
-            loader = PyPDFLoader(filepath)
-            documents.extend(loader.load())
-        except PyPDFLoader.EncryptedFileError:
-            password = st.text_input(f"Enter password for {filename}:", type="password")
-            if password:
-                loader = PyPDFLoader(filepath, password=password)
-                documents.extend(loader.load())
-            else:
-                st.warning(f"Skipping {filename} due to missing password.")
-
+        loader = UnstructuredFileLoader(filepath) # Change here
+        documents.extend(loader.load())
 
 # Split the documents into smaller chunks for efficient processing
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=6000, chunk_overlap=750)
