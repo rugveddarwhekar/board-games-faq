@@ -9,3 +9,5 @@ streamlit
 pyngrok
 langchain_community
 ipython
+numpy
+pandas
