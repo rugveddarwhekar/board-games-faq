@@ -26,7 +26,7 @@ GOOGLE_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Setup the directory where files are stored
-pdf_directory = "./board_games" # Adjust if your PDFs are in a different subdirectory
+pdf_directory = "./board_games/" # Adjust if your PDFs are in a different subdirectory
 
 # LLM and LangChain code
 #------------------------------------------------------
