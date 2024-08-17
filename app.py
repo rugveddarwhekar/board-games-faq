@@ -35,11 +35,11 @@ pdf_directory = "./board_games/" # Adjust if your PDFs are in a different subdir
 documents = []
 
 # Iterate through each file in the directory
-# for filename in os.listdir(pdf_directory):
-#     if filename.endswith(".pdf"):
-#         filepath = os.path.join(pdf_directory, filename)
-#         loader = PyPDFLoader(filepath)
-#         documents.extend(loader.load())
+for filename in os.listdir(pdf_directory):
+    if filename.endswith(".pdf"):
+        filepath = os.path.join(pdf_directory, filename)
+        loader = PyPDFLoader(filepath)
+        documents.extend(loader.load())
 
 # for filename in os.listdir(pdf_directory):
 #     if filename.endswith(".pdf"):
@@ -58,11 +58,11 @@ documents = []
 #                 st.warning(f"Skipping {filename} due to missing password.")
 
 # Iterate through each file in the directory
-for filename in os.listdir(pdf_directory):
-    if filename.endswith(".pdf"):
-        filepath = os.path.join(pdf_directory, filename)
-        loader = UnstructuredFileLoader(filepath) # Change here
-        documents.extend(loader.load())
+# for filename in os.listdir(pdf_directory):
+#     if filename.endswith(".pdf"):
+#         filepath = os.path.join(pdf_directory, filename)
+#         loader = UnstructuredFileLoader(filepath) # Change here
+#         documents.extend(loader.load())
 
 # Split the documents into smaller chunks for efficient processing
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=6000, chunk_overlap=750)
